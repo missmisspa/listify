@@ -1,0 +1,93 @@
+
+body.accountSetting {
+    background-image: url('bgStars.png');
+    background-size: cover; 
+    background-position: fixed; 
+    background-repeat: no-repeat;
+    margin-bottom: 200px;
+    padding: 0;
+}
+
+.container-fluid{
+    font-family: raleway;
+}
+
+.d-flex {
+    align-items: center;
+    display: flex;
+    padding: 20px;
+}
+
+.text-center {
+    color: #fff;
+    font-weight: 600;
+}
+
+.custom-btn {
+    background-color: transparent; 
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    margin-left: 20px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+    color: #7A6BBC;
+    outline: none;
+}
+
+.row.justify-content-center {
+    margin-top: 20px;
+}
+
+.rounded-circle {
+    width: 150px; 
+    height: 150px;
+    border: none;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.rounded-circle:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+}
+
+.container {
+    width: 70%;
+    background-color: #EEEFF1;
+    font-weight: 600;
+    color: #001F3F;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+.text-inside-container {
+    color: #555;
+    font-weight: 600;
+}
+
+.btn-primary {
+    align-items: center;
+    width: 60%;
+    background-color: #BD9DE9;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #7A6BBC;
+    color: #fff;
+}

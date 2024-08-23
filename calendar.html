@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles12.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/raleway.css">
+    <title>Listify</title>
+</head>
+<body class="body" style="background-color: #ECE8E7;">  
+
+    <div class="container container-curved">
+        <div class="row">
+            <div class="col-12">
+                <div class="calendar-container">
+                    <div class="month">
+                        <button id="prevMonth" onclick="changeMonth(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h2 id="currentMonth">October</h2>
+                        <button id="nextMonth" onclick="changeMonth(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendarBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom custom-navbar">
+        <div>
+            <img src="userIcon.png" alt="User" class="navbar-icon" tabindex="0" onclick="redirectTo('accountSetting.html')">
+            <p class="navbar-link">User</p>
+        </div>
+        <div>
+            <img src="list.png" alt="Home" class="navbar-icon" tabindex="0" onclick="redirectTo('homePage.html')">
+            <p class="navbar-link">Home</p>
+        </div>
+        <div>
+            <img src="calendar.png" alt="Calendar" class="navbar-icon" tabindex="0" onclick="redirectTo('calendar.html')">
+            <p class="navbar-link">Calendar</p>
+        </div>
+        <div>
+            <img src="overview.png" alt="Overview" class="navbar-icon" tabindex="0" onclick="redirectTo('overview.html')">
+            <p class="navbar-link">Overview</p>
+        </div>
+    </nav>
+
+        
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-wP7hi3BUp2b+3a2JCpMlXMT1ynJ9c2egts0V+aC3WqsVpeBy3xqmFDE3Pn0JtN9R" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyDsF2egKtTzoIfeN2tsIivPz4JMy6pgI" crossorigin="anonymous">
+    </script>
+
+    <script src="script.js"></script>
+    <script>
+        function redirectTo(destination) {
+            window.location.href = destination;
+        }
+    </script>
+</body>
+</html>

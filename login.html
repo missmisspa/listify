@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles4.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/raleway.css">
+    <title>Listify</title>
+</head>
+<body class="startPage">  
+    <div class="container">
+        <img src="listifyLogo.png" alt="listify logo">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="custom-form-container">
+                    <h2>Login</h2>
+                    <form onsubmit="return loginUser()">
+                        <div class="form-group">
+                            <img src="user.png" alt="Icon">
+                            <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <img src="lock.png" alt="Lock">
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="custom-btn">Login</button>
+                    </form>
+                    <div class="sign-up">
+                        <p onclick="window.location.href='signUp.html'">Don't have an Account?<b> Sign Up Now</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loginUser() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === '' || password === '') {
+                alert('Please enter both username and password.');
+                return false;
+            }
+
+            window.location.href = 'homePage.html';
+            return false;
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

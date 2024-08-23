@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles4.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/raleway.css">
+    <title>Listify</title>
+</head>
+<body class="startPage">  
+    <div class="container">
+        <img src="listifyLogo.png" alt="listify logo">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="custom-form-container">
+                    <h2>Create New Account</h2>
+                    <form id="registrationForm" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <img src="user.png" alt="Icon">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <img src="lock.png" alt="Lock">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <img src="lock.png" alt="Lock">
+                            <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                        </div>
+                        <button type="submit" onclick="window.location.href='homePage.html'" class="custom-btn">Create Account</button>
+                    </form>
+                    <div class="sign-up">
+                        <p onclick="window.location.href='login.html'">Already have an Account? <b>Login Now</a></b></p>
+                    </div>
+                    <div id="error-message" class="error-message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var confirm_password = document.getElementById('confirm_password').value;
+
+            if (username === '' || password === '' || confirm_password === '') {
+                document.getElementById('error-message').innerHTML = 'Please fill in all fields.';
+                return false;
+            }
+
+            window.location.href = 'login.html';
+            return false; 
+        }
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles6.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/raleway.css">
+    <title>Listify</title>
+</head>
+<body class="body" style="background-color: #ECE8E7;">  
+        <div class="container">
+                <div class="button-container d-flex justify-content-between flex-wrap">
+                    <button type="button" class="custom-btn">All</button>
+                    <button type="button" class="custom-btn">Personal</button>
+                    <button type="button" class="custom-btn">Work</button>
+                    <button type="button" class="custom-btn">School</button>
+                    <button type="button" class="custom-btn">Birthday</button>
+                </div>
+
+        <h1 class="task-heading" data-toggle="collapse" data-target="#todaySection" aria-expanded="true" aria-controls="todaySection">
+            Today
+            <i class="fas fa-caret-down"></i>
+        </h1>
+        <div class="collapse show collapsible-section" id="todaySection">
+            <div class="container-task">
+                <div class="form-group">
+                    <input type="checkbox" id="todayTask1" class="task-checkbox">
+                    <label for="todayTask1">Drink Water</label>
+                </div>
+            </div>
+            <div class="container-task">
+                <div class="form-group">
+                    <input type="checkbox" id="todayTask2" class="task-checkbox">
+                    <label for="todayTask2">Code</label>
+                </div>
+            </div>
+            </div>
+    
+        <h1 class="task-heading" data-toggle="collapse" data-target="#tomorrowSection" aria-expanded="true" aria-controls="tomorrowSection">
+            Tomorrow
+            <i class="fas fa-caret-down"></i>
+        </h1>
+        <div class="collapse show collapsible-section" id="tomorrowSection">
+            <div class="container-task">
+                <div class="form-group">
+                    <input type="checkbox" id="tomorrowTask1" class="task-checkbox">
+                    <label for="tomorrowTask1">Pray</label>
+                </div>
+            </div>
+            <div class="container-task">
+                <div class="form-group">
+                    <input type="checkbox" id="tomorrowTask2" class="task-checkbox">
+                    <label for="tomorrowTask2">Cry</label>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="task-heading" data-toggle="collapse" data-target="#weekSection" aria-expanded="true" aria-controls="weekSection">
+            This Week
+            <i class="fas fa-caret-down"></i>
+        </h1>
+        <div class="collapse show collapsible-section" id="weekSection">
+            <div class="container-task">
+                <div class="form-group">
+                    <input type="checkbox" id="weekTask1" class="task-checkbox">
+                    <label for="weekTask1">Breakdown</label>
+                </div>
+            </div>
+            <div class="container-task">
+                    <div class="form-group">
+                        <input type="checkbox" id="weekTask2" class="task-checkbox">
+                        <label for="weekTask2">Cry</label>
+                    </div>
+                </div>
+        </div>
+
+        <h1 class="task-heading" data-toggle="collapse" data-target="#completedSection" aria-expanded="true" aria-controls="completedSection">
+            Completed Tasks
+            <i class="fas fa-caret-down"></i>
+        </h1>
+        <div class="collapse show collapsible-section" id="completedSection">
+        </div>
+
+        <nav class="navbar fixed-bottom custom-navbar">
+            <div>
+                <img src="userIcon.png" alt="User" class="navbar-icon" tabindex="0" onclick="redirectTo('accountSetting.html')">
+                <p class="navbar-link">User</p>
+            </div>
+            <div>
+                <img src="list.png" alt="Home" class="navbar-icon" tabindex="0" onclick="redirectTo('homePage.html')">
+                <p class="navbar-link">Home</p>
+            </div>
+            <div>
+                <img src="calendar.png" alt="Calendar" class="navbar-icon" tabindex="0" onclick="redirectTo('calendar.html')">
+                <p class="navbar-link">Calendar</p>
+            </div>
+            <div>
+                <img src="overview.png" alt="Overview" class="navbar-icon" tabindex="0" onclick="redirectTo('overview.html')">
+                <p class="navbar-link">Overview</p>
+            </div>
+        </nav>
+
+        <button id="addTaskButton" class="circular-button" data-toggle="modal" data-target="#taskModal"><i class="fas fa-plus"></i></button>
+
+        <div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="taskModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskModalLabel">Add Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="taskForm" action="homePage.html" method="post">
+                        <div class="form-group">
+                            <label for="task">Task:</label>
+                            <input type="text" class="form-control" id="task" name="task" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="datetime">Date and Time:</label>
+                            <input type="datetime-local" class="form-control" id="datetime" name="datetime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category:</label>
+                            <select class="form-control" id="category" name="category" required>
+                                <option value="all">All</option>
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="school">School</option>
+                                <option value="birthday">Birthday</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="custom-primary-btn">Add Task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.task-checkbox').change(function () {
+                var isChecked = $(this).prop('checked');
+                
+                if (isChecked) {
+                    var taskContainer = $(this).closest('.container-task');
+                    taskContainer.detach().appendTo('#completedSection');
+                    
+                    taskContainer.find('label').css('text-decoration', 'line-through');
+                }
+            });
+        });
+        </script>
+        
+        <script>
+            function redirectTo(destination) {
+                window.location.href = destination;
+            }
+        </script>
+</body>
+</html>

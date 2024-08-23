@@ -1,0 +1,108 @@
+/*
+    Start Page starts here...
+*/
+
+html{
+    background-image: linear-gradient(to right,violet, pink, white);
+}
+
+.Logo img{
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    left: 550px;
+    top:250px;
+}
+
+/*
+    Get Started Page starts here...
+*/
+
+.Text1 h1{
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    left: 500px;
+    top: 300px;
+}
+
+.Text2 p{
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    width: 400px;
+    left: 465px;
+    top: 390px;
+    text-align: center;
+}
+
+.FirstImage img{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    left: 460px;
+    top: 20px;
+}
+
+.startButton button{
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 540px;
+    top: 600px;
+    border-radius: 15px;
+    color: indigo;
+    font-size: 20px;
+}
+
+/*
+    Get Started Page ends here...
+
+    Login/Sign up Page starts here...
+*/
+
+.Welcome h1{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    left: 36vw;
+    top: 15px;
+}
+
+.LoginPrompt{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    left: 40vw;
+    top: 400px;
+}
+
+.LoginButton button{
+    position: absolute;
+    height: 60px;
+    width: 150px;
+    border-radius: 15px;
+    left: 44vw;
+    top: 450px;
+    color: indigo;
+    font-size: 30px;
+}
+
+.SignUpPrompt{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    left: 38vw;
+    top: 550px;
+}
+
+.SignUpButton button{
+    position: absolute;
+    height: 60px;
+    width: 150px;
+    border-radius: 15px;
+    left: 44vw;
+    top: 600px;
+    color: indigo;
+    font-size: 30px;
+}

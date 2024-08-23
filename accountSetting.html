@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles7.css">
+    <link rel="stylesheet" type="text/css" href="path/to/raleway.css">
+    <title>Listify</title>
+</head>
+<body class="body" style="background-color: #EEEFF1;">  
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
+            <button class="custom-btn" onclick="window.location.href='homePage.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="text-center">Account Settings</h1>
+            <div></div> 
+        </div>
+
+        <div class="user-info d-flex align-items-center my-4">
+            <div class="user-avatar mr-3" onclick="window.location.href='avatarPicker.html'">
+                <img src="avatar.png" alt="User" class="rounded-circle" style="width: 80px; height: 80px;">
+            </div>
+            <div class="user-details" onclick="window.location.href='editProfile.html'" >
+                <h4 class="mb-1">Username</h4>
+                <p class="mb-0">user@example.com</p>
+            </div>
+        </div>
+        
+        <section id="editProfile" class="my-4">
+            <h2 class="mb-3">Information</h2>
+            <div class="section-header d-flex align-items-center mb-2">
+                <i class="fas fa-cog mr-2" onclick="window.location.href='editProfile.html'"></i>
+                <h2 class="mb-0" onclick="window.location.href='editProfile.html'">Edit Profile</h2>
+            </div>
+        </section>
+
+        <section id="preferences" class="my-4">
+            <h2 class="mb-3">Preferences</h2>
+            <div class="section-header d-flex align-items-center mb-2">
+                <i class="fas fa-bell mr-2" onclick="window.location.href='notification.html'"></i>
+                <h2 class="mb-0" onclick="window.location.href='notification.html'">Notification</h2>
+            </div>
+            <div class="section-header d-flex align-items-center mb-2">
+                <i class="fas fa-language mr-2" onclick="window.location.href='languages.html'"></i>
+                <h2 class="mb-0" onclick="window.location.href='languages.html'">Language</h2>
+            </div>
+            <div class="section-header d-flex align-items-center mb-2">
+                <i class="fas fa-paint-roller mr-2" onclick="window.location.href='themes.html'"></i>
+                <h2 class="mb-0" onclick="window.location.href='themes.html'">Theme</h2>
+            </div>
+        </section>
+
+        <section id="account" class="my-4">
+            <h2 class="mb-3">Account</h2>
+            <div class="section-header d-flex align-items-center mb-2">
+                <i class="fas fa-user-circle mr-2" onclick="window.location.href='switchAcc.html'"></i>
+                <h2 class="mb-0" onclick="window.location.href='switchAcc.html'">Switch Account</h2>
+            </div>
+            <div class="section-header d-flex align-items-center mb-2">
+                <i class="fas fa-sign-out-alt mr-2" onclick="window.location.href='login.html'"></i>
+                <h2 class="mb-0" onclick="window.location.href='login.html'">Log Out</h2>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

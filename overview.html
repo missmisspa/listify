@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles13.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/raleway.css">
+    <title>Listify</title>
+</head>
+<body class="body" style="background-color: #ECE8E7;">  
+    
+
+    <div class="container d-flex justify-content-center">
+        <div class="curved-container">
+            <h3>48%</h3>
+            <p>Percentage</p>
+        </div>
+        <div class="curved-container">
+            <h3>6</h3>
+            <p>Pending Tasks</p>
+        </div>
+        <div class="curved-container">
+            <h3>13</h3>
+            <p>Completed Tasks</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 mx-auto curved-chart-container text-center">
+            <h3>Completion of Daily Tasks</h3>
+            <canvas id="dailyTasksChart"></canvas>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 mx-auto curved-chart-container text-center">
+            <h3>Pending Tasks in Categories</h3>
+            <canvas id="pendingTasksChart"></canvas>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom custom-navbar">
+        <div>
+            <img src="userIcon.png" alt="User" class="navbar-icon" tabindex="0" onclick="redirectTo('accountSetting.html')">
+            <p class="navbar-link">User</p>
+        </div>
+        <div>
+            <img src="list.png" alt="Home" class="navbar-icon" tabindex="0" onclick="redirectTo('homePage.html')">
+            <p class="navbar-link">Home</p>
+        </div>
+        <div>
+            <img src="calendar.png" alt="Calendar" class="navbar-icon" tabindex="0" onclick="redirectTo('calendar.html')">
+            <p class="navbar-link">Calendar</p>
+        </div>
+        <div>
+            <img src="overview.png" alt="Overview" class="navbar-icon" tabindex="0" onclick="redirectTo('overview.html')">
+            <p class="navbar-link">Overview</p>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sample data for the pie chart
+            var pendingTasksData = {
+                labels: ['Personal', 'Work', 'School', 'Birthdays'],
+                datasets: [{
+                    data: [7, 4, 15, 5],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    hoverOffset: 4
+                }]
+            };
+
+            var pendingTasksCtx = document.getElementById('pendingTasksChart').getContext('2d');
+
+            var pendingTasksChart = new Chart(pendingTasksCtx, {
+                type: 'pie',
+                data: pendingTasksData
+            });
+        });
+    </script>
+
+    <script>
+    function redirectTo(destination) {
+        window.location.href = destination;
+                }
+    </script>
+</body>
+</html>
